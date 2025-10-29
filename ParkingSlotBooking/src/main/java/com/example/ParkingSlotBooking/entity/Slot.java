@@ -1,3 +1,4 @@
+
 package com.example.ParkingSlotBooking.entity;
 
 import java.util.List;
