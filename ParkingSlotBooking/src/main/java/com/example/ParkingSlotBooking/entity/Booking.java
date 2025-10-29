@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 @Entity
@@ -20,10 +21,12 @@ public class Booking {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonBackReference("user-bookings")
     private User user;
 
     @ManyToOne
     @JoinColumn(name = "slot_id", nullable = false)
+    @JsonBackReference("slot-bookings")
     private Slot slot;
 
     private LocalDateTime startTime;

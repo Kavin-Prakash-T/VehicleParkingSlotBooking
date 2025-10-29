@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Data
@@ -24,6 +25,7 @@ public class Slot {
     private String location;
 
     @OneToMany(mappedBy = "slot", cascade = CascadeType.ALL)
+    @JsonManagedReference("slot-bookings")
     private List<Booking> bookings;
 
 }
