@@ -24,7 +24,7 @@ public class User {
     private String phoneNumber;
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    /*@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Booking> bookings;*/
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Booking> bookings;
 
 }

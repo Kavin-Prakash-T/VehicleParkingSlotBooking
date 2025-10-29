@@ -23,8 +23,8 @@ public class Slot {
     private double pricePerHour;
     private String location;
 
-    /*@OneToMany(mappedBy = "slot", cascade = CascadeType.ALL)
-    private List<Booking> bookings;*/
+    @OneToMany(mappedBy = "slot", cascade = CascadeType.ALL)
+    private List<Booking> bookings;
 
 }
 
