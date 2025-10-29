@@ -20,6 +20,8 @@ public class User {
 
     private String name;
     private String email;
+    private String password;
+    private String phoneNumber;
     private LocalDateTime createdAt = LocalDateTime.now();
 
     /*@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
