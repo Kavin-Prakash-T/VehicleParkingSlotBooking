@@ -30,6 +30,6 @@ public class Booking {
     private LocalDateTime endTime;
     private String status;
     private double amount;
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = LocalDateTime.now();
 }
 
